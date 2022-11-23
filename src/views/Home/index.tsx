@@ -3,13 +3,12 @@ import {WithStatusBar} from '../../components';
 import colors from '../../themes/colors';
 import {Header} from '../../components/Header/index';
 import {TitleHome} from './style';
+import {texts} from './texts';
 const ListPokemonHome: React.FunctionComponent = () => {
   return (
     <>
       <Header onPressBack={() => console.log('volta')} />
-      {/* <TitleHome>
-        More than 250 Pokemons for you to choose your favorite
-      </TitleHome> */}
+      <TitleHome>{texts.titleText}</TitleHome>
     </>
   );
 };
