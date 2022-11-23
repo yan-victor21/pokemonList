@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+      // 👇️ make sure it's set to react-jsx
+      "jsx": "react"
+      // ... rest
+    },
+    // ... rest
+  }
+  
