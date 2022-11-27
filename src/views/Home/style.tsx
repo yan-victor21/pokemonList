@@ -24,5 +24,4 @@ export const ListCardPokemon = styled(ScrollView)`
   width: 100%;
   margin-top: 11%;
   flex-direction: row;
-  background-color: yellow;
 `;

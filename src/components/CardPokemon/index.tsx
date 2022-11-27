@@ -1,13 +1,39 @@
 import React from 'react';
 import {View} from 'react-native';
-import {CardContainer, Container, IndexPokemon, TextIndex} from './styled';
-const CardPokemon: React.FunctionComponent = () => {
+import {
+  CardContainer,
+  Container,
+  IndexPokemon,
+  TextIndex,
+  ContentImage,
+  NamePokemon,
+  FlagTypeConted,
+  FlagType,
+  TextFlagType,
+} from './styled';
+
+export interface ICardPokemonProps {
+  namePokemon?: string;
+  flags?: string[];
+  imagePokemon?: string;
+  onPress?: () => void;
+  key: string;
+}
+const CardPokemon: React.FunctionComponent<ICardPokemonProps> = (props) => {
   return (
     <Container>
       <IndexPokemon>
-        <TextIndex>#001</TextIndex>
+        <TextIndex>{props.key}</TextIndex>
       </IndexPokemon>
-      <CardContainer></CardContainer>
+      <CardContainer onPress={props.onPress}>
+        <ContentImage></ContentImage>
+        <NamePokemon>{props.namePokemon}</NamePokemon>
+        <FlagTypeConted>
+          <FlagType>
+            <TextFlagType>Grass</TextFlagType>
+          </FlagType>
+        </FlagTypeConted>
+      </CardContainer>
     </Container>
   );
 };
