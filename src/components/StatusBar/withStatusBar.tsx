@@ -2,7 +2,7 @@ import React from 'react';
 import {StatusBarStyle} from 'react-native';
 import {StatusBar} from './statusBar';
 
-const WithStatusBar = (color: string, theme: StatusBarStyle = undefined) => {
+const WithStatusBar = (color: string, theme: StatusBarStyle) => {
   const withStatusBarComponent =
     (Component: React.ReactNode) =>
     (
